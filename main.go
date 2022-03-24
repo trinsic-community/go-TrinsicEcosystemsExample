@@ -5,16 +5,16 @@ import (
 	"log"
 
 	sdk "github.com/trinsic-id/sdk/go/proto"
-	"github.com/trinsic-id/sdk/go/services"
+	trinsic "github.com/trinsic-id/sdk/go/services"
 )
 
 func main() {
-	options, err := services.NewServiceOptions()
+	options, err := trinsic.NewServiceOptions()
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	accountService, err := services.NewAccountService(options)
+	accountService, err := trinsic.NewAccountService(options)
 	if err != nil {
 		log.Fatal(err)
 	}
